@@ -1,0 +1,46 @@
+@keyframes swim-left-right {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+        transform: scaleX(-1); /* Flip otter horizontally to swim right */
+    }
+    100% {
+        left: 0;
+        transform: scaleX(1); /* Reset otter's scale to swim left */
+    }
+}
+
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    background-image: url('Water.avif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#otter {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    background-image: url('GayOtter.png');
+    background-size: cover;
+    top: 58%;
+    left: 0;
+    animation: swim-left-right 5s linear infinite;
+
+}
+
+
+#feed-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
